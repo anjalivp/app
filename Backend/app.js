@@ -7,28 +7,10 @@ const User = require('./src/model/user');
 var app = new express();
 app.use(cors());
 app.use(bodyparser.json());
-// username="admin"
-// email="anjalivp92@gmail.com"
-// password="123456"
 app.get('/',(req,res)=>
 {
   res.send("Hello from server");
 })
-// app.post('/login'(req,res) => {
-//   let userData=req.body
-
-//   if(!username){
-//     res.status(401).send('Invalid Username')
-//   } else
-//   if(password!==userData.password){
-//     res.status(401).send('Invalid Password')
-//   } else {
-//     let payload={subject:username+password}
-//     let token=jwt.sign(payload,'secretKey')
-//     res.status(200).send({token})
-//   }
-  
-// })
 
 app.post('/login', (req,res) => {
   let userData = req.body

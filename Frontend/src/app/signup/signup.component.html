@@ -14,14 +14,12 @@
                     <div class="form-group">
                         <label for="" style="margin-right:27px ; font-weight: bold;">Email</label>
                         <input [(ngModel)]="registerUserData.email" name="email" #email="ngModel" type="text" [class.is-invalid]="email.invalid && email.touched" pattern="^[a-z0-9.%+]+@[a-z0-9.-]+\.[a-z]{2,4}" required>
-                        <!-- <br><small class="text-danger" [class.d-none]="email.valid || email.touched">Enter a valid email</small> -->
                         <div *ngIf="email.invalid && email.touched" class="error">Email is required</div>
                         <div *ngIf="email.errors?.['pattern']" class="error">Enter a valid email</div>
                     </div><br><br>
                     <div class="form-group">
                         <label for="" style="font-weight: bold;">Password</label>
                         <input [(ngModel)]="registerUserData.password" minlength="4" name="password" #password="ngModel" type="password"  required>
-                        <!-- <br><small class="text-danger" [class.d-none]="password.valid || password.touched">Enter a valid password</small> -->
                         <div *ngIf="password.invalid && password.touched" class="error">Password is required</div>
                         <div *ngIf="password.errors?.['minlength']" class="error">Enter a valid password</div>
                     </div>

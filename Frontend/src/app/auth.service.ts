@@ -22,9 +22,6 @@ export class AuthService {
   return this.http.post<any>(this._loginUrl,user);
   }
 
-// signupUser(username:string,password:string):Observable<any>{
-//   return this.http.post('http://localhost:3000/signup',{username,password})
-// }
 signupUser(user: any){
   return this.http.post<any>(this._signupUrl,user);
 }
