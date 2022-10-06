@@ -1,0 +1,28 @@
+.card{
+    width:300px;
+    background:linear-gradient(skyblue,grey);
+    height:380px;
+    display: flex;
+    
+
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+input.ng-invalid{
+    border-left:5px solid red;
+}
+
+input.ng-valid{
+    border-left:5px solid green;
+    
+}
+.error{
+    color: red;
+   
+    
+}

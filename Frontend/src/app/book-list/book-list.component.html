@@ -1,0 +1,41 @@
+
+<app-header></app-header>
+<div class="card">
+    <!-- <div class="card-header">
+
+    </div> -->
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            <!-- <button class="btn btn-primary"> -->
+                                   Image
+                            <!-- </button> -->
+                        </th>
+                        <th>Book Name</th>
+                        <th>Author</th>
+                        <th>Genre</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let book of books">
+                        <td><img [src] = 'book.imageUrl'
+                            [style.width.px]="imageWidth"
+                            [style.margin.px]="imageMargin">
+                        </td>
+                        <td>{{book.book}}</td>
+                        <td>{{book.author}}</td>
+                        <td>{{book.genre}}</td>
+                        <td>
+                            <button class="btn btn-primary" style="cursor:pointer" (click)="editBook(book)" style="margin-right:10px">UPDATE</button>
+                            <button class="btn btn-danger" style="cursor:pointer" (click)="deleteBook(book)">DELETE</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
